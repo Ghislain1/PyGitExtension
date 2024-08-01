@@ -33,6 +33,9 @@ The Apps should be developed 90% with python language
 As a developer i want to be able build,  psublish and deploy the app automatically.
 ## Testing
 As a developer i should provide at unittest/ test automation for code
+## Code guideline
+- As a developer,we should use the same formater ==>  Black formatter	https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+
 
 #  Links/Inspiration
 - https://git-scm.com/download/gui/windows  ==>  Display Similar app
