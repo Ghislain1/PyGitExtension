@@ -1,17 +1,26 @@
 
+# pip install --upgrade pytest pytest-qt PyQt6
 
 import pytest
+from PyQt6.QtWidgets import QWidget
 from src.ui.main_window import MainWindow
  
 
 @pytest.fixture
 def window(qtbot):
-    window = MainWindow()   
-    qtbot.addWidget(window)
-    return window
+    mainWindow = MainWindow() 
+    try:
+         qtbot.addWidget(mainWindow) # To Ensure that the widget gets closed by the end of the test
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
+    return mainWindow
+ 
 
 # The prefix test_  is default naming convention for auto discovery.
-def test_window_title(window):
-     
+def test_window_title(window: MainWindow):
+ 
     assert window.windowTitle() == "PyGitExtension"
+
+
+ 

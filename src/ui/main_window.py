@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:    
         super().__init__()
-        self.__setUi()
+        self.__setUi() # Call the private Method to init UI
 
       
 
