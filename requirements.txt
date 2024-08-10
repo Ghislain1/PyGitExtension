@@ -1,3 +1,4 @@
 pytest
 pytest-qt
 PySide6
+opencv-python
