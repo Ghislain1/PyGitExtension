@@ -1,7 +1,7 @@
 
 
 import pytest
-from main_window import MainWindow
+from src.ui.main_window import MainWindow
 
 def test_window_title(qtbot):
     window = MainWindow()
