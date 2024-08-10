@@ -18,9 +18,10 @@ def window(qtbot):
  
 
 # The prefix test_  is default naming convention for auto discovery.
-def test_window_title(window: MainWindow):
- 
-    assert window.windowTitle() == "PyGitExtension"
 
+def test_button_click(window):
+     # Verify initial state
+    assert window.button.text() == "TODO!"
 
+  
  

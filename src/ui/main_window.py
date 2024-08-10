@@ -1,7 +1,7 @@
 
 
 import sys
-from PyQt6.QtWidgets import  QMainWindow
+from PyQt6.QtWidgets import  QMainWindow, QVBoxLayout, QWidget, QPushButton
 
 
 
@@ -18,5 +18,17 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("PyGitExtension")
         self.setGeometry(100, 100, 600, 400)
+       
+        self.button = QPushButton("TODO!")
+        self.button.clicked.connect(self.on_button_click)
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.button)
+
+        container = QWidget()
+        container.setLayout(layout)
+        self.setCentralWidget(container)
+        
          
-     
+    def on_button_click(self):
+        self.button.setText("Clicked!")
