@@ -21,8 +21,8 @@ def window(qtbot):
 
 def test_button_click(window):
      # Verify initial state
-    # assert window.button.text() == "TODO!"
-    pass
+    assert window.button.text() == "TODO!"
+   
 
   
  
