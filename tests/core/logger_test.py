@@ -1,4 +1,2 @@
-
-
-def test_logger_write( ): 
+def test_logger_write():
     pass
