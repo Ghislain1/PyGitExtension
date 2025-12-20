@@ -7,3 +7,7 @@
 - uv pip list
 
 
+# Exception
+-  [remote rejected] main -> main (push declined due to repository rule violations)
+   -  How has been added
+   -  create base repro
