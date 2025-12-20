@@ -3,26 +3,20 @@
 import sys
 
 # Externe Imports
-from PyQt6.QtWidgets import QApplication
+ 
 from qt_material import apply_stylesheet
 
-# Legacy imports
-from core import info
-from  ui.main_window import MainWindow
-from core.logger import log
+from  ui.app import App
+sys.path.append(".")  
 
 
 
 def main ():
+       
+    app = App(sys.argv) 
 
-    log.info("##############################  Appis Loading  ---")             
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    
-    # Apply theme
-    apply_stylesheet(app, info.APP_STYLE_SHEET)
-    log.debug(f" ############################## App uses Style: {info.APP_STYLE_SHEET} ---")   
+    app.__showMainWindow()
+     
     sys.exit(app.exec())
 
   
