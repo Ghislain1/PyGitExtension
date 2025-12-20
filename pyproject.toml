@@ -1,0 +1,12 @@
+[project]
+name = "pygitextension"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6>=6.10.1",
+    "pytest>=9.0.2",
+    "pytest-qt>=4.5.0",
+    "qt-material>=2.17",
+]

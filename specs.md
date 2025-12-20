@@ -1,4 +1,10 @@
 # Intro
+## Setup UV
+- uv init.
+- uv venv
+-  .venv\Scripts\activate
+-  
+
 ## Def
 The PyGitExtension is a standalone app for managing git repositiories
  
