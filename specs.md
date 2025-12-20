@@ -47,5 +47,13 @@ As a developer i should provide at unittest/ test automation for code
 - https://git-scm.com/download/gui/windows  ==>  Display Similar app
 - https://github.com/sourcegit-scm/sourcegit  ==> nice UI
 - https://docs.syntevo.com/SmartGit/Latest/Main-Windows.html ==> nice functions
+- https://mpolinowski.github.io/docs/Development/Python/2022-10-08-python-desktop-app/2022-10-08/
+  - Explain Python - PyQt Desktop App
+
+# Pattern
+- MVVM (Model–View–ViewModel) ⭐ Recommended
+  - Model → Domain + data
+  - View → Widgets (QWidget, QMainWindow)
+  - ViewModel → QObject with: @pyqtProperty and pyqtSignal
 
 

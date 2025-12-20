@@ -6,6 +6,10 @@
 - uv pip install -r requirements.txt or  uv sync
 - uv pip list
 
+# Run the App
+- Change Directory to src
+- uv run __main__.py
+
 
 # Exception
 -  [remote rejected] main -> main (push declined due to repository rule violations)
