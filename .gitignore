@@ -9,6 +9,7 @@ doc/_build
 **/__pycache__/
 build
 dist
+.venv/
 
 protobuf_data/
  
