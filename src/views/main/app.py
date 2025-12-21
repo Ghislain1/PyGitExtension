@@ -6,13 +6,10 @@ from PyQt6.QtGui import QIcon, QPixmap
 
 
 # Legacy imports
-
-from core.info import APP_ICON
-from ui.main_window import MainWindow
-
-from core.logger import log
-from ui.view import CounterView
-from viewmodels.login_vm import CounterViewModel
+from shared.info import APP_ICON
+from shared.logger import log
+from main.main_window import MainWindow
+from viewmodels.main_vm import MainViewModel
 
 
 # The parent of appalication
@@ -20,6 +17,7 @@ class App(QApplication):
     def __init__(self, *args):
         super().__init__(*args)
         self.setWindowIcon(QIcon(APP_ICON))
+        self.__applyThemes("dark_blue.xml")
 
     def __showSplash(self):
         self.splash = QSplashScreen(QPixmap(APP_ICON))
@@ -31,12 +29,6 @@ class App(QApplication):
 
     def showMainWindow(self):
         log.info("##############################  App is Loading  ---")
-        self.mainWindow = MainWindow()
-
-        # Counter View and ViewModel setup
-        vm = CounterViewModel()
-        view = CounterView(vm)
-        self.mainWindow.setCentralWidget(view)
-
+        self.mainWindow = MainWindow(MainViewModel())
         # Show the main window
         self.mainWindow.show()

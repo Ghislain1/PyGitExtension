@@ -1,8 +1,6 @@
-import os, sys
+import sys
 import logging
-import logging.handlers
-
-from core import info
+from . import info
 
 
 class StreamToLogger(object):
