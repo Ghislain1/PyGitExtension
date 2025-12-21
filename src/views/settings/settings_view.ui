@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsView</class>
+ <widget class="QWidget" name="SettingsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+
+   <!-- Example Settings Controls -->
+   <item>
+    <widget class="QLabel" name="lblSettingsTitle">
+     <property name="text">
+      <string>Settings</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 18pt; font-weight: bold;</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+   <widget class="QComboBox" name="comboThemes"/>   
+    </item>
+
+   <item>
+    <widget class="QCheckBox" name="chkEnableNotifications">
+     <property name="text">
+      <string>Enable Notifications</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QCheckBox" name="chkDarkMode">
+     <property name="text">
+      <string>Enable Dark Mode</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QPushButton" name="btnSaveSettings">
+     <property name="text">
+      <string>Save Settings</string>
+     </property>
+    </widget>
+   </item>
+
+ 
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

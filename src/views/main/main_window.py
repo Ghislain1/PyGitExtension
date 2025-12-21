@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QLabel, QWidget
 from PyQt6 import uic
 from viewmodels.main_vm import MainViewModel
 from views.counter.counter_view import CounterView
+from views.settings.settings_view import SettingsView
 
 
 class MainWindow(QMainWindow):
@@ -31,7 +32,7 @@ class MainWindow(QMainWindow):
         self.btnCounter.clicked.connect(lambda: self.contentArea.setCurrentIndex(1))
 
     def setUpSettingsView(self):
-        self.settings_view = QLabel("Settings View")
+        self.settings_view = SettingsView(self.mainViewModel.settings_vm)
         # Add views to the stacked widget
         self.contentArea.addWidget(self.settings_view)
         # Connect button to switch to counter view
