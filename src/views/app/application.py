@@ -13,7 +13,6 @@ class Application:
         self.__applyThemes__("dark_blue.xml")
         self.splash = SplashScreen()
         self.main_window = MainWindow(MainViewModel())
-        self.main_window.setWindowTitle("PyGitExtension")
 
     def run(self):
         self.splash.show()
@@ -24,4 +23,4 @@ class Application:
 
     def __applyThemes__(self, xmlTheme: str):
         log.debug(f" ############################## App uses Style: {xmlTheme} ---")
-        apply_stylesheet(self.qt_app, xmlTheme)
+        apply_stylesheet(self.qt_app, xmlTheme, invert_secondary=False)

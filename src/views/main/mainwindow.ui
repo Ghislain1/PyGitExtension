@@ -1,50 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
+
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>200</height>
+    <width>900</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MVVM Counter App</string>
+   <string>PyQt6 Hamburger Menu</string>
   </property>
 
- <!--  <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+
+    <!-- Side Menu -->
     <item>
-     <widget class="QLabel" name="labelCount">
-      <property name="text">
-       <string>Count: 0</string>
+     <widget class="QFrame" name="sideMenu">
+      <property name="minimumWidth">
+       <number>200</number>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="maximumWidth">
+       <number>200</number>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
+      <layout class="QVBoxLayout" name="sideMenuLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+
+       <item>
+        <widget class="QPushButton" name="btnHome">
+         <property name="text">
+          <string>Home</string>
+         </property>
+        </widget>
+       </item>
+       <!--Add Counter Button-->
+       <item>
+        <widget class="QPushButton" name="btnCounter">
+         <property name="text">
+          <string>Counter</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnSettings">
+         <property name="text">
+          <string>Settings</string>
+         </property>
+        </widget>
+       </item>
+     
+      </layout>
      </widget>
     </item>
+
+    <!-- Main Area -->
     <item>
-     <widget class="QPushButton" name="btnIncrement">
-      <property name="text">
-       <string>Increment</string>
-      </property>
+     <widget class="QWidget" name="mainArea">
+      <layout class="QVBoxLayout" name="mainLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+
+       <!-- Top Bar -->
+       <item>
+        <widget class="QFrame" name="topBar">
+         <property name="minimumHeight">
+          <number>5</number>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <layout class="QHBoxLayout" name="topBarLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+
+          <item>
+           <widget class="QPushButton" name="btnHamburger">
+            <property name="minimumWidth">
+             <number>40</number>
+            </property>
+            <property name="text">
+             <string>☰</string>
+            </property>
+           </widget>
+          </item>
+          
+         </layout>
+        </widget>
+       </item>
+
+       <!-- Content Area -->
+       <item>
+        <widget class="QStackedWidget" name="contentArea"/>
+       </item>
+
+      </layout>
      </widget>
     </item>
+
    </layout>
-  </widget> -->
-  <widget class="QWidget" name="counterPlaceholder"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  </widget>
+
  </widget>
 
  <resources/>

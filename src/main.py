@@ -2,8 +2,7 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 
-# Externe Imports
-from app.application import Application
+from views.app.application import Application
 
 
 # sys.path.append(".")

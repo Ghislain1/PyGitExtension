@@ -1,18 +1,38 @@
-from PyQt6.QtWidgets import QMainWindow, QVBoxLayout
-from PyQt6.uic import loadUi
+from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QLabel, QWidget
+from PyQt6 import uic
 from viewmodels.main_vm import MainViewModel
 from views.counter.counter_view import CounterView
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, vm: MainViewModel) -> None:
+    def __init__(self, mainViewModel: MainViewModel) -> None:
         super().__init__()
-        loadUi("views/main/mainwindow.ui", self)  # Load .ui
-        self.vm = vm
-        # counterPlaceholder is the QWidget you added in Designer
-        layout = QVBoxLayout()
-        self.counterPlaceholder.setLayout(layout)
+        uic.loadUi("views/main/mainwindow.ui", self)  # Load .ui
+        self.mainViewModel = mainViewModel
 
-        # Create CounterView and embed it
-        self.counter_view = CounterView(self.vm.counter_vm)
-        layout.addWidget(self.counter_view)
+        self.setUpHomeView()
+        self.setUpCounterView()
+        self.setUpSettingsView()
+        self.contentArea.setCurrentIndex(0)
+
+    # TODO: Connect buttons to switch views REfactor to avoid duplicates
+    def setUpHomeView(self):
+        self.home_view = QLabel("Welcome to the Home View")
+        # Add views to the stacked widget
+        self.contentArea.addWidget(self.home_view)
+        # Connect button to switch to counter view
+        self.btnCounter.clicked.connect(lambda: self.contentArea.setCurrentIndex(0))
+
+    def setUpCounterView(self):
+        self.counter_view = CounterView(self.mainViewModel.counter_vm)
+        # Add views to the stacked widget
+        self.contentArea.addWidget(self.counter_view)
+        # Connect button to switch to counter view
+        self.btnCounter.clicked.connect(lambda: self.contentArea.setCurrentIndex(1))
+
+    def setUpSettingsView(self):
+        self.settings_view = QLabel("Settings View")
+        # Add views to the stacked widget
+        self.contentArea.addWidget(self.settings_view)
+        # Connect button to switch to counter view
+        self.btnSettings.clicked.connect(lambda: self.contentArea.setCurrentIndex(2))
