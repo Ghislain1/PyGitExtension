@@ -14,7 +14,7 @@
    <string>MVVM Counter App</string>
   </property>
 
-  <widget class="QWidget" name="centralwidget">
+ <!--  <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="labelCount">
@@ -41,8 +41,8 @@
      </widget>
     </item>
    </layout>
-  </widget>
-
+  </widget> -->
+  <widget class="QWidget" name="counterPlaceholder"/>
   <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

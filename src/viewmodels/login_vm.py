@@ -1,5 +1,4 @@
 from PyQt6.QtCore import QObject, pyqtSignal, pyqtProperty
-from core.models import CounterModel
 
 
 class LoginViewModel(QObject):

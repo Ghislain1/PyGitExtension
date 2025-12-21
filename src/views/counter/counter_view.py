@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout
-from viewmodels.login_vm import CounterViewModel
+
+from viewmodels.count_vm import CounterViewModel
 
 
 class CounterView(QWidget):
@@ -9,7 +10,7 @@ class CounterView(QWidget):
         self.vm = vm
 
         self.label = QLabel()
-        self.button = QPushButton("Increment")
+        self.button = QPushButton("Increment1")
 
         layout = QVBoxLayout(self)
         layout.addWidget(self.label)
