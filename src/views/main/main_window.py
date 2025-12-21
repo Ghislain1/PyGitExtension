@@ -1,11 +1,13 @@
-import sys
 from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QPushButton
+from PyQt6.uic import loadUi
+from viewmodels.main_vm import MainViewModel
 
 
 class MainWindow(QMainWindow):
-    def __init__(self) -> None:
+    def __init__(self, vm: MainViewModel) -> None:
         super().__init__()
-        self.__setUi()  # Call the private Method to init UI
+        loadUi("views/main/mainwindow.ui", self)  # Load .ui
+        self.vm = vm
 
     def __setUi(self) -> None:
         self.setWindowTitle("PyGitExtension")

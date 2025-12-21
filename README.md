@@ -2,13 +2,13 @@
 - curl -LsSf https://astral.sh/uv/install.sh | sh
 - uv  init
 - uv venv 
-- source .venv/bin/activate   # or Windows equivalent
+- .venv\Scripts\activate   # or Windows equivalent
 - uv pip install -r requirements.txt or  uv sync
 - uv pip list
 
 # Run the App
 - Change Directory to src
-- uv run __main__.py
+- uv run  main.py
 
 
 # Exception

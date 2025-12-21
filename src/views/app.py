@@ -12,7 +12,7 @@ from ui.main_window import MainWindow
 
 from core.logger import log
 from ui.view import CounterView
-from view_models import CounterViewModel
+from viewmodels.login_vm import CounterViewModel
 
 
 # The parent of appalication

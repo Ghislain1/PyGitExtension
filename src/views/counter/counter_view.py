@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout
-from view_models import CounterViewModel
+from viewmodels.login_vm import CounterViewModel
 
 
 class CounterView(QWidget):
