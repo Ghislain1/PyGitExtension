@@ -2,7 +2,7 @@
 import sys
 
 # Externe Imports
-from view import CounterView
+from ui.view import CounterView
 from view_models import CounterViewModel
 from ui.app import App
 from qt_material import apply_stylesheet
@@ -14,11 +14,7 @@ sys.path.append(".")
 def main():
     app = App(sys.argv)
 
-    # app.showMainWindow()
-
-    vm = CounterViewModel()
-    view = CounterView(vm)
-    view.show()
+    app.showMainWindow()
 
     sys.exit(app.exec())
 

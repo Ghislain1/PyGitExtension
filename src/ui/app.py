@@ -11,6 +11,8 @@ from core.info import APP_ICON
 from ui.main_window import MainWindow
 
 from core.logger import log
+from ui.view import CounterView
+from view_models import CounterViewModel
 
 
 # The parent of appalication
@@ -30,4 +32,11 @@ class App(QApplication):
     def showMainWindow(self):
         log.info("##############################  App is Loading  ---")
         self.mainWindow = MainWindow()
+
+        # Counter View and ViewModel setup
+        vm = CounterViewModel()
+        view = CounterView(vm)
+        self.mainWindow.setCentralWidget(view)
+
+        # Show the main window
         self.mainWindow.show()
